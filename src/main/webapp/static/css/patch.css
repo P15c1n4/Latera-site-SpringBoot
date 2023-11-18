@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+
+*{
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+}
+
+
+.Flex1{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.Flex2{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.Flex3{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.Flex4{
+    display: flex;
+    flex-direction: row;
+}
+
+.Flex5{
+    display: flex;
+    flex-direction: column-reverse
+}
+
+.Flex6{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+#mainDiv{
+    height: 1200px;
+    background: url(/latera/img/background2.jpg); 
+    background-size: cover;
+    background-position: center;
+}
+
+
+#mainContentTextDiv{
+    background-color: #66bbff;
+    height: 1000px;
+    width: 750px;
+    border-radius: 15px;
+    border: solid 3px #000;
+    overflow-y: auto;
+}
+
+#mainContentAttPainelDiv{
+    margin-top: 10px;
+    background-color: #66bbff;
+    width: 400px;
+    border-radius: 15px;
+}
+
+#mainContentAttDiv{
+    color: #fff;
+    margin-left: 10px;
+}
+
+
+
+/*=================Layout===================*/
+
+
+
+#mainContentAttPainelDiv ul li{
+    width: 390px;
+    display: block;
+    position: relative;
+    list-style: none;
+    border-bottom: solid 3px #5e5e5e;
+    margin-bottom: 5px;
+}
+
+#mainContentAttPainelDiv ul li span{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-weight: 700;
+}
+
+#mainContentAttPainelDiv ul li a{
+    display: inline-block;
+    white-space: nowrap;
+    overflow: auto;
+    width: 270px;
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 400;
+
+}
+
+/*barra de rolagem*/
+/*Firefox */
+#mainContentAttPainelDiv ul li a {
+  scrollbar-width: thin;
+  scrollbar-color: #ccc #fff;
+}
+
+/*Chrome, Edge, and Safari */
+#mainContentAttPainelDiv ul li a::-webkit-scrollbar {
+  width: 12px;
+}
+
+#mainContentAttPainelDiv ul li a::-webkit-scrollbar-track {
+  background: #fff;
+  border-radius: 20px;
+}
+
+#mainContentAttPainelDiv ul li a::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 20px;
+}
+
+
+#mainContentAttPainelDiv ul li img{
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+}
+
+#headerTitleTextDiv{
+    width: 75%;
+    margin: 0px 0px 5px 5%;
+
+}
+
+#headerTitleDiv{
+    margin-top: 10px;
+}
+
+#autorNome{
+    font-weight: 700;
+    color: #fff;
+    text-shadow: #000 0.08em 0.08em 0.05em;
+}
+
+#headerAutorDataDiv{
+    margin-left: 5%;
+}
+
+#headerAutorDiv{
+    margin-right: 10px;
+}
+#textDiv{
+    margin: 10px 0px 0px 7%;
+    width: 85%;
+}
+
+#mainContentBottomInnerDiv{
+    width: 1180px;
+    margin-left: 6%;
+}
+
+
+
+
+
+
+/*==================================menu==================================*/
+
+.headerCentralDiv{
+    height: 170px;
+    width: 1180px;
+    margin-left: 6%;
+    
+}
+
+.headerNavDiv{
+    width: 750px;
+    background-color: #14161a;
+    border: #343538 solid 2px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.headerNavConteinerDiv{
+    height: 50px;
+    width: 100%;
+}
+
+.headerNavConteinerDiv ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.headerNavConteinerDiv nav{
+    z-index: 10;
+}
+
+nav ul li{
+    padding: 20px;
+}
+
+.botaoS{
+    padding-right: 0px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+
+#check{
+    display: none;
+}
+
+#check:checked ~ ul{
+    right: 0;
+}
+
+.menuTextColor{
+    color: #fff;
+}
+  
+.botaoS{
+    padding-right: 0px;
+}
+
+.botao2{
+    text-decoration: none;
+    background-color: #ff0000;
+    padding: 5px 10px 5px 10px;
+    color: #fff;
+    font-size: 1.3em;
+    font-weight: 700;
+    border-radius: 5px;
+    border: 0;
+    cursor: pointer;
+}
+
+.logoinner img{
+    width: 140px;
+    height: 140px;
+    margin-bottom: -40px;
+}
+
+nav{
+    margin-right: 20px
+}
+
+nav ul{
+    list-style: none;
+    background-color: #343538;
+    height: 100vh;
+    position: fixed;
+    top: 60px;
+    right: -100%;
+    width: 30%;
+    transition: all 0.5s;
+}
+
+label{
+    font-size: 3em;
+    position: fixed;
+    top: 5px;
+    right: 15px;
+    color: rgba(0,0,0,0.5);
+}
+
+
+@media (min-width: 1200px){
+    
+    
+    /*=====================Menu======================*/
+    label{
+        display: none;
+    }
+    
+    nav ul{
+        position: static;
+        height: auto;
+        background-color: transparent;
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    nav ul li{
+        float: left;
+    }
+
+    nav ul li a{
+        color: #343538
+    }
+
+    nav ul li a:hover{
+        color: #c00000;
+        cursor: pointer;
+    }
+}

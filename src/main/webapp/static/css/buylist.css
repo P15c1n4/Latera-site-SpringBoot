@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+
+*{
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+}
+
+.Flex2{
+    display: flex;
+    align-items: center;
+
+}
+
+
+
+#mainContentAttPainelDiv{
+    border: solid 3px #000;
+    width: 455px;
+    background-color: gray;
+    padding: 0px 10px;
+    border-radius: 10px;
+}
+
+
+
+
+/*=================Layout===================*/
+
+
+#mainContentAttPainelDiv ul li{
+    width: 455px;
+    display: block;
+    position: relative;
+    list-style: none;
+    border-bottom: solid 3px #5e5e5e;
+    margin-bottom: 5px;
+}
+
+#mainContentAttPainelDiv ul li span{
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    font-weight: 700;
+    color: #fff;
+}
+
+#mainContentAttPainelDiv ul li a{
+    display: inline-block;
+    white-space: nowrap;
+    overflow: auto;
+    width: 420px;
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 700;
+
+}
+
+/*barra de rolagem*/
+/*Firefox */
+#mainContentAttPainelDiv ul li a {
+  scrollbar-width: thin;
+  scrollbar-color: #ccc #fff;
+}
+
+/*Chrome, Edge, and Safari */
+#mainContentAttPainelDiv ul li a::-webkit-scrollbar {
+  width: 12px;
+}
+
+#mainContentAttPainelDiv ul li a::-webkit-scrollbar-track {
+  background: #fff;
+  border-radius: 20px;
+}
+
+#mainContentAttPainelDiv ul li a::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 20px;
+}
+
+
+#mainContentAttPainelDiv ul li img{
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+}
+
+.mainContentBottomEventsEventTabsDiv div{
+    margin: 10px 1px;
+}
+
+.tabs{
+    text-decoration: none;
+    color:  #fff;
+    font-size: 1.3em;
+    font-weight: 700;
+    background-color: #5e5e5e;
+    padding: 0px 10px;
+    border: 2px solid #343538;
+    border-radius: 10px 10px 0px 0px;
+    cursor: pointer;
+}
+
+.botao1{
+    text-decoration: none;
+    background-color: #66bbff;
+    padding: 5px 10px 5px 10px;
+    color: #fff;
+    font-size: 1.3em;
+    font-weight: 700;
+    border-radius: 5px;
+    border: 0;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
