@@ -201,27 +201,26 @@ function displayReset(){
     document.getElementById("frmSingupEmail").style.borderColor = "#66bbff";
 }
 
- function sendLoginRequest() {
+ async function sendLoginRequest() {
             var username = document.getElementById("frmSinginNome").value;
             var password = document.getElementById("frmSinginSenha").value;
 
             var data = {
-                username: username,
-                password: password
+                userName: username,
+                passWord: password
             };
 
             var jsonData = JSON.stringify(data);
 
-            fetch('https://exemplo.com/api/login', {
+            fetch('auth/login', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
                 },
                 body: jsonData
             })
-            .then(response => response.json())
-            .then(data => {
-                console.log(data);
+            .then(response => {
+                window.location.href = '/auth/authenticate';
             })
             .catch(error => {
                 console.error('Erro na requisição de login:', error);

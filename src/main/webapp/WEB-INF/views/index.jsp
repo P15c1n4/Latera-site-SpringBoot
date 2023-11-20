@@ -14,7 +14,7 @@
       <link rel="stylesheet" href="/static/css/style.css">
 </head>
 <body>
-    <%if(request.getAttribute("alert") != null){%> 
+    <%if(request.getAttribute("alert") != null){%>
         <div class="Conteiner Flex7" id="alert">
             <a class="alertBotao" id="alertBotaoAlert"><%out.print(request.getAttribute("alert"));%></a>
         </div>
