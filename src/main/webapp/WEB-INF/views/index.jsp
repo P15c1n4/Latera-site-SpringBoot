@@ -14,15 +14,9 @@
       <link rel="stylesheet" href="/static/css/style.css">
 </head>
 <body>
-    <%if(request.getAttribute("alert") != null){%>
-        <div class="Conteiner Flex7" id="alert">
-            <a class="alertBotao" id="alertBotaoAlert"><%out.print(request.getAttribute("alert"));%></a>
-        </div>
-    <%}else if(request.getAttribute("erro") != null){%>
-        <div class="Conteiner Flex7" id="alert">
-            <a class="alertBotao" id="alertBotaoErro"><%out.print(request.getAttribute("erro"));%></a>
-        </div>
-    <%}%>
+    <div class="Conteiner Flex7" id="alert">
+        <a class="alertBotao" ></a>
+    </div>
 
     <input type="checkbox" id="checkLogin">
     <div id="divLogin">
@@ -53,10 +47,10 @@
         <section id="senctionSingup">
             <div class="Conteiner Flex7" id="SingupInfo">
                 <h2 >Registrar conta</h2>
-                <form name="frmSingup" action="register" method="post" class="Conteiner FrmSingup">
+                <form name="frmSingup" class="Conteiner FrmSingup">
                     <table>
                         <tr>
-                            <td><img src="img/reprovado.png" alt="validador" id="validate"/><input type="text" name="nome" placeholder="Usuário 4-15" class="caixa1" id="frmSingupNome"><p class="frmSingupErro" id="frmSingupNomeErro"></p></td>
+                            <td><img src="/static/img/reprovado.png" alt="validador" id="validate"/><input type="text" name="nome" placeholder="Usuário 4-15" class="caixa1" id="frmSingupNome"><p class="frmSingupErro" id="frmSingupNomeErro"></p></td>
                         </tr>
                         <tr>
                             <td><input type="password" name="senha" placeholder="Senha 8+" class="caixa1" id="frmSingupSenha"><p class="frmSingupErro" id="frmSingupSenhaErro"></p></td>
@@ -92,11 +86,11 @@
                     <li><a href="#conteudo">Conteúdo</a></li>
                     <li><a href="#wireframe">Download</a></li>
                     <%if(session.getAttribute("usernome") == null){%>
-                        <li class="botaoS"><a class="botao1" id="buttonLogin1">Signin</a></li>
-                        <li class="botaoS"><a class="botao2" id="buttonSingup1">Signup</a></li>
+                        <li class="botaoS"><a class="botao1" id="buttonLogin1">Entrar</a></li>
+                        <li class="botaoS"><a class="botao2" id="buttonSingup1">Registrar</a></li>
                     <%}else{%>
                         <li class="botaoS"><a class="botao1" id="buttonAccount" href="hall">Olá, <%out.print(session.getAttribute("usernome"));%></a></li>
-                        <li class="botaoS"><a class="botao2" id="buttonLogout" href="logout">Logout</a></li>  
+                        <li class="botaoS"><a class="botao2" id="buttonLogout" href="/auth/logout">Logout</a></li>
                     <%}%>
                 </ul>
             </nav>
@@ -256,7 +250,7 @@
             </div>
         </div>
     </footer>
-    <a href="#inicio" id="topo"><img src="img/top.png" alt="topo do site"></a>
+    <a href="#inicio" id="topo"><img src="/static/img/top.png" alt="topo do site"></a>
     <script src="/static/js/index.js"></script>
 </body>
 </html>

@@ -11,11 +11,7 @@ import java.util.Optional;
 @Repository
 public interface UserRepository extends JpaRepository<UserModel, BigInteger> {
 
-    boolean existsByUserNameAndPassWord(String userName, String passWord);
-
-    @Query(nativeQuery = true, value="" +
-            "SELECT accountdbid, userName, passWord, email FROM account_info " +
-            "WHERE userName = :userName AND passWord = :passWord")
-    Optional<UserModel> getUserLoginPass(String userName, String passWord);
+    boolean existsByUserName(String userName);
+    Optional<UserModel> findByUserNameAndPassWord(String userName, String passWord);
 
 }

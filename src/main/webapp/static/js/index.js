@@ -6,30 +6,29 @@ input.addEventListener("input", function() {
   if (input.value.length >= 4) {
     timer = setTimeout(function() {
     let xhr = new XMLHttpRequest();
-    xhr.open("GET", `api/valuser?user=${input.value}`, true);
+    xhr.open("GET", `/api/v1/user?user=${input.value}`, true);
     xhr.onreadystatechange = function() {
       if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
-        let response = this.responseText;
-        if (response === "1") {
-            document.getElementById("validate").src = "img/reprovado.png";
-        } else if (response === "0") {
-            document.getElementById("validate").src = "img/aprovado.png";
-        }
+            document.getElementById("validate").src = "/static/img/reprovado.png";
+
+      }else if(this.readyState === XMLHttpRequest.DONE && this.status === 404){
+            document.getElementById("validate").src = "/static/img/aprovado.png";
       }
     };
     xhr.send();
     }, 1000);
   }else{
-    document.getElementById("validate").src = "img/reprovado.png";
+    document.getElementById("validate").src = "/static/img/reprovado.png";
   }
 });
 
-document.addEventListener("DOMContentLoaded", function() {
+function alertMensage(type, mensage) {
 
   const elementoAlert = document.getElementById("alert");
   const alertBotao = document.getElementsByClassName("alertBotao")[0];
+  alertBotao.innerHTML = mensage;
 
-  if (document.getElementById("alertBotaoErro")) {
+  if (type === 'erro') {
 
     alertBotao.style.backgroundColor = "#c00000";
     elementoAlert.style.top = "0";
@@ -37,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function() {
     setTimeout(function() {
       elementoAlert.style.top = "-100%";
     }, 3000);
-  }else if(document.getElementById("alertBotaoAlert")){
+  }else if(type === 'alert'){
   
     alertBotao.style.backgroundColor = "#66bbff";
     elementoAlert.style.top = "0";
@@ -46,10 +45,11 @@ document.addEventListener("DOMContentLoaded", function() {
       elementoAlert.style.top = "-100%";
     }, 3000);
   }
-});
+};
 
 document.getElementById('buttonLogin1').addEventListener('click', function(){
     closeLogin();
+    document.getElementById("check").click();
 });
       
 document.getElementById('closeLogin').addEventListener('click', function(){
@@ -62,6 +62,7 @@ document.getElementById('closeSingup').addEventListener('click', function(){
 
 document.getElementById('buttonSingup1').addEventListener('click', function(){
     closeSingup();
+    document.getElementById("check").click();
 });
 
 
@@ -111,7 +112,36 @@ function validarRegistro(){
         frmSingup.email.focus()
         document.getElementById("frmSingupEmail").style.borderColor = "#ff0000";
     }else{
-        document.forms["frmSingup"].submit()
+
+        var data = {
+            userName: nome,
+            passWord: senha,
+            email: email
+        };
+
+        var jsonData = JSON.stringify(data);
+
+        fetch('auth/register', {
+            method: 'put',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: jsonData
+        })
+        .then(response => {
+
+            if(response.status == 201){
+                closeSingup();
+                location.reload()
+
+            }else{
+                 alertMensage('erro', 'Falha ao criar conta, dados inválidos');
+
+            }
+        })
+        .catch(error => {
+            console.error('Erro na requisição de login:', error);
+        });
     }
     
     
@@ -201,7 +231,7 @@ function displayReset(){
     document.getElementById("frmSingupEmail").style.borderColor = "#66bbff";
 }
 
- async function sendLoginRequest() {
+function sendLoginRequest() {
             var username = document.getElementById("frmSinginNome").value;
             var password = document.getElementById("frmSinginSenha").value;
 
@@ -220,7 +250,14 @@ function displayReset(){
                 body: jsonData
             })
             .then(response => {
-                window.location.href = '/auth/authenticate';
+
+                if(response.ok){
+                    closeLogin();
+                    location.reload()
+                }else if(response.status == 404){
+                     alertMensage('erro', 'Falha no login, dados inválidos');
+
+                }
             })
             .catch(error => {
                 console.error('Erro na requisição de login:', error);

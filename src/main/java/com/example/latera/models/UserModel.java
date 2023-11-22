@@ -21,7 +21,7 @@ public class UserModel implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private BigInteger accountdbid;
 
     @Column(name = "userName")
@@ -32,4 +32,5 @@ public class UserModel implements Serializable {
 
     @Column
     private String email;
+
 }
