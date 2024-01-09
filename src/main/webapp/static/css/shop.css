@@ -98,7 +98,7 @@ body{
 }
 
 #mainDiv{
-    background: url(/latera/img/background3.jpg);
+    background: url(/static/img/background3.jpg);
     background-size: cover;
     background-position: center;
     height: 1200px;

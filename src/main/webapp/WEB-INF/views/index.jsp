@@ -14,9 +14,15 @@
       <link rel="stylesheet" href="/static/css/style.css">
 </head>
 <body>
-    <div class="Conteiner Flex7" id="alert">
-        <a class="alertBotao" ></a>
-    </div>
+    <%if(request.getAttribute("alert") != null){%>
+        <div class="Conteiner Flex7" id="alert">
+            <a class="alertBotao" id="alertBotaoAlert"><%out.print(request.getAttribute("alert"));%></a>
+        </div>
+    <%}else if(request.getAttribute("erro") != null){%>
+        <div class="Conteiner Flex7" id="alert">
+            <a class="alertBotao" id="alertBotaoErro"><%out.print(request.getAttribute("erro"));%></a>
+        </div>
+    <%}%>
 
     <input type="checkbox" id="checkLogin">
     <div id="divLogin">
@@ -74,7 +80,7 @@
     <header id="inicio">
         <div class="Conteiner Flex">
             <div class="logo">
-                <a href="/latera"><img src="/static/img/logo.png" alt="tera logo"></a>
+                <a href="/"><img src="/static/img/logo.png" alt="tera logo"></a>
             </div>
             <nav>
                 <input type="checkbox" id="check">
@@ -89,8 +95,8 @@
                         <li class="botaoS"><a class="botao1" id="buttonLogin1">Entrar</a></li>
                         <li class="botaoS"><a class="botao2" id="buttonSingup1">Registrar</a></li>
                     <%}else{%>
-                        <li class="botaoS"><a class="botao1" id="buttonAccount" href="hall">Olá, <%out.print(session.getAttribute("usernome"));%></a></li>
-                        <li class="botaoS"><a class="botao2" id="buttonLogout" href="/auth/logout">Logout</a></li>
+                        <li class="botaoS"><a class="botao1" id="buttonAccount" href="/hall">Olá, <%out.print(session.getAttribute("usernome"));%></a></li>
+                        <li class="botaoS"><a class="botao2" id="buttonLogout" href="/auth/logout">Sair</a></li>
                     <%}%>
                 </ul>
             </nav>
@@ -111,7 +117,7 @@
                 <img src="/static/img/quadro1.jpg" alt="LaTera tera server private. Femele Elf">
                 <div>
                     <h2>Novidades</h2>
-                    <iframe src="/latera/api/eventsList?type=0" width="485" height="290"></iframe>
+                    <iframe src="/eventlist?type=0" width="485" height="290"></iframe>
                 </div>
             </div>
             <div id="textoSobre">

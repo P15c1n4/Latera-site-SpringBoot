@@ -1,17 +1,13 @@
-package com.example.latera.models;
+package com.example.latera.models.web;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
+import jakarta.persistence.*;
 
 import lombok.Getter;
 import lombok.Setter;
 
 import java.io.Serializable;
 import java.math.BigInteger;
+
 
 @Entity
 @Getter
@@ -30,7 +26,6 @@ public class UserModel implements Serializable {
     @Column(name = "passWord")
     private String passWord;
 
-    @Column
     private String email;
 
 }

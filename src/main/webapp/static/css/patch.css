@@ -54,7 +54,7 @@ body{
 
 #mainDiv{
     height: 1200px;
-    background: url(/latera/img/background2.jpg); 
+    background: url(/static/img/background2.jpg);
     background-size: cover;
     background-position: center;
 }

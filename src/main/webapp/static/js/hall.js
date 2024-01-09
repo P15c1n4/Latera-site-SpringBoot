@@ -38,9 +38,9 @@ function toggleChild() {
   children[currentIndex].classList.add("showBanner");
   controlerBanner[currentIndex].checked = true;
 }
-var rankTab = "ALL";
+var rankTab = "0";
 
-document.getElementById("ALL").style.borderColor = "red";
+document.getElementById("0").style.borderColor = "red";
 
 function setRankTab(idDg){
    rankTab = idDg;
@@ -82,20 +82,21 @@ function findPlayerRank(){
     var xhr = new XMLHttpRequest();
     
     if(nome !== null || nome !== ""){
-        xhr.open("GET", 'api/dgrank?user='+nome+'&dungeon='+rankTab, true);
+        xhr.open("GET", 'api/v1/userdgrank?username='+nome+'&continentid='+rankTab, true);
     }else{
-        xhr.open("GET", 'api/dgrank?user=&dungeon='+rankTab, true);
+        xhr.open("GET", 'api/v1/userdgrank?username=&continentid='+rankTab, true);
     }
     xhr.onload = function() {
         if (xhr.status === 200) {
-            if(xhr.responseText.length === 0){
+
+            if(xhr.responseText.length === 2){
                 rankPlayer(0,"ESSA PESQUISA NÃO RETORNOU DADOS!",undefined,undefined,undefined);
                 
             }else{
                 let data = JSON.parse(xhr.responseText);
 
                 for (var i = 0; i < data.length; i++) {
-                    rankPlayer(i,data[i].userName,data[i].userClass,data[i].dgCount,data[i].dgStatus);
+                    rankPlayer(i,data[i].userName,data[i].userClass,data[i].clearCount,data[i].dgStatus);
                 }
 
             }
@@ -106,7 +107,7 @@ function findPlayerRank(){
 }   
 
 function clearRank(){
-    document.getElementById("ALL").style.borderColor = "#343538";
+    document.getElementById("0").style.borderColor = "#343538";
     document.getElementById("9916").style.borderColor = "#343538";
     document.getElementById("9027").style.borderColor = "#343538";
     document.getElementById("3126").style.borderColor = "#343538";
@@ -130,37 +131,33 @@ function rankPlayer(pos,name,pClass,clear,dgStatus){
     
     
     
-    if(dgStatus !== undefined){
-    
-        if(parseInt(clear) === undefined){
-            statusColor = "";
-            clear = "Clears: 0";
-            
-        }else if(dgStatus === "Skilled"){
+
+
+        if(dgStatus === "Skilled"){
             statusColor = "#ff6600";
             clear = "Clears: "+clear+" - "+dgStatus;
-            
-        }else{
+
+        }else if(dgStatus === "Rookie"){
             statusColor = "#4cea4c";
             clear = "Clears: "+clear+" - "+dgStatus;
+        }else{
+            statusColor = "#fff";
+            clear = "Clears: "+clear;
         }
-    }else{
-        clear = "Clears: "+clear;  
-    }
-    
+
 
     
     elemeto.style.display = "block";
     
     switch (pClass){
         case undefined:
-            elemeto.querySelector("img").src = "img/unk.png";
+            elemeto.querySelector("img").src = "/static/img/unk.png";
             elemeto.querySelector("a").innerHTML = name;
             elemeto.querySelector("span").innerHTML = "";
             elemeto.querySelector("span").style.color = statusColor;
             break;
         default :
-            elemeto.querySelector("img").src = "img/"+pClass+".png";
+            elemeto.querySelector("img").src = "/static/img/"+pClass+".png";
             elemeto.querySelector("a").innerHTML = name;
             elemeto.querySelector("span").innerHTML = clear;
             elemeto.querySelector("span").style.color = statusColor;

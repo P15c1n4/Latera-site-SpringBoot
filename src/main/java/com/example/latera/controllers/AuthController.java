@@ -2,12 +2,12 @@ package com.example.latera.controllers;
 
 import com.example.latera.DTOs.UserLoginDto;
 import com.example.latera.DTOs.UserRecorderDto;
+import com.example.latera.Utils.Check;
 import com.example.latera.Utils.Hash;
-import com.example.latera.models.UserModel;
-import com.example.latera.repositories.UserRepository;
+import com.example.latera.models.web.UserModel;
+import com.example.latera.repositories.web.UserRepository;
 import jakarta.servlet.http.HttpSession;
 import jakarta.validation.Valid;
-import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -25,6 +25,7 @@ public class AuthController {
 
     @Autowired
     UserRepository userRepository;
+
 
     @PostMapping(value = "/auth/login")
     public ResponseEntity<String>  Login (@RequestBody @Valid UserLoginDto userLoginDto, HttpSession session, Model model){
@@ -44,18 +45,29 @@ public class AuthController {
     @PutMapping(value = "/auth/register")
     public ResponseEntity  Register(@RequestBody @Valid UserRecorderDto userRecorderDto, HttpSession session){
 
-        if(userRepository.existsByUserName(userRecorderDto.userName())){
+        if(userRepository.existsByUserName(userRecorderDto.userName()) ||!Check.matchesNumAndLet(userRecorderDto.userName())){
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
         }
 
-        var userModel = new UserModel();
-        BeanUtils.copyProperties(userRecorderDto, userModel);
-        userModel.setPassWord(Hash.Sha512(userRecorderDto.passWord()));
+        //metodo .save não grava no banco
+//        var userModel = new UserModel();
+//        BeanUtils.copyProperties(userRecorderDto, userModel);
+//        userModel.setPassWord(Hash.Sha512(userRecorderDto.passWord()));
+//
+//        UserModel userModel0 = userRepository.save(userModel);
 
-        UserModel userModel0 = userRepository.save(userModel);
-        
-        session.setAttribute("userid", userModel0.getAccountdbid());
-        session.setAttribute("usernome", userModel0.getUserName());
+        String PasswordHash = Hash.Sha512(userRecorderDto.passWord());
+
+        userRepository.registerUserAccount(userRecorderDto.userName(), PasswordHash, userRecorderDto.email());
+        Optional<UserModel> userModel = userRepository.findByUserNameAndPassWord(userRecorderDto.userName(), PasswordHash);
+
+
+        if(userModel.isEmpty()){
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+        }
+
+       session.setAttribute("userid", userModel.get().getAccountdbid());
+       session.setAttribute("usernome", userModel.get().getUserName());
 
         return ResponseEntity.status(HttpStatus.CREATED).build();
     }

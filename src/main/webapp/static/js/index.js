@@ -22,13 +22,12 @@ input.addEventListener("input", function() {
   }
 });
 
-function alertMensage(type, mensage) {
+document.addEventListener("DOMContentLoaded", function() {
 
   const elementoAlert = document.getElementById("alert");
   const alertBotao = document.getElementsByClassName("alertBotao")[0];
-  alertBotao.innerHTML = mensage;
 
-  if (type === 'erro') {
+  if (document.getElementById("alertBotaoErro")) {
 
     alertBotao.style.backgroundColor = "#c00000";
     elementoAlert.style.top = "0";
@@ -36,8 +35,8 @@ function alertMensage(type, mensage) {
     setTimeout(function() {
       elementoAlert.style.top = "-100%";
     }, 3000);
-  }else if(type === 'alert'){
-  
+  }else if(document.getElementById("alertBotaoAlert")){
+
     alertBotao.style.backgroundColor = "#66bbff";
     elementoAlert.style.top = "0";
 
@@ -45,7 +44,7 @@ function alertMensage(type, mensage) {
       elementoAlert.style.top = "-100%";
     }, 3000);
   }
-};
+});
 
 document.getElementById('buttonLogin1').addEventListener('click', function(){
     closeLogin();
