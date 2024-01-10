@@ -13,6 +13,9 @@ import org.springframework.context.annotation.Primary;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 
+import java.util.HashMap;
+import java.util.Map;
+
 
 @Configuration
 @EnableJpaRepositories(
@@ -32,9 +35,12 @@ public class GameDbConfig {
     public LocalContainerEntityManagerFactoryBean gameEntityManager(
             EntityManagerFactoryBuilder builder,
             @Qualifier("GameDataSource") DataSource dataSource) {
+        Map<String, Object> properties = new HashMap<>();
+        properties.put("hibernate.dialect", "org.hibernate.dialect.SQLServer2012Dialect");
         return builder
                 .dataSource(dataSource)
                 .packages("com.example.latera.models.game")
+                .properties(properties)
                 .build();
     }
 

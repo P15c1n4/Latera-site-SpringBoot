@@ -24,9 +24,9 @@
             <div id="mainContentAttPainelDiv" >
                 <div class="mainContentBottomEventsEventBoxDiv">
                     <div class="mainContentBottomEventsEventTabsDiv Flex2">
-                        <div><a href="/api/v1/offerts?type=0" class="tabs" <% if("0".equals(type)){ %>style="border-color: red;"<% } %>>All</a></div>
-                        <div><a href="/api/v1/offerts?type=1" class="tabs" <% if("1".equals(type)){ %>style="border-color: red;"<% } %>>Tikat</a></div>
-                        <div><a href="/api/v1/offerts?type=2" class="tabs" <% if("2".equals(type)){ %>style="border-color: red;"<% } %>>Packs e Serviços</a></div>
+                        <div><a href="/offerts?type=0" class="tabs" <% if("0".equals(type)){ %>style="border-color: red;"<% } %>>All</a></div>
+                        <div><a href="/offerts?type=1" class="tabs" <% if("1".equals(type)){ %>style="border-color: red;"<% } %>>Tikat</a></div>
+                        <div><a href="/offerts?type=2" class="tabs" <% if("2".equals(type)){ %>style="border-color: red;"<% } %>>Packs e Serviços</a></div>
                     </div>
                 </div>
 

@@ -12,6 +12,9 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 
+import java.util.HashMap;
+import java.util.Map;
+
 
 @Configuration
 @EnableJpaRepositories(
@@ -29,9 +32,12 @@ public class AuthDbConfig {
     public LocalContainerEntityManagerFactoryBean authEntityManager(
             EntityManagerFactoryBuilder builder,
             @Qualifier("authDataSource") DataSource dataSource) {
+        Map<String, Object> properties = new HashMap<>();
+        properties.put("hibernate.dialect", "org.hibernate.dialect.MariaDBDialect");
         return builder
                 .dataSource(dataSource)
                 .packages("com.example.latera.models.web")
+                .properties(properties)
                 .build();
     }
 

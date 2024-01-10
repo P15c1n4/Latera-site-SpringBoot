@@ -254,7 +254,7 @@ function sendLoginRequest() {
                     closeLogin();
                     location.reload()
                 }else if(response.status == 404){
-                     alertMensage('erro', 'Falha no login, dados inválidos');
+                     alert('Falha no login, dados inválidos');
 
                 }
             })
