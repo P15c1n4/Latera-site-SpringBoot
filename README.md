@@ -1,5 +1,5 @@
 #  Site Latera.
-## Site simples + Backend feito em java funcionando em cima do jogo tera online.
+## Site simples + Backend feito em java SpringBoot, MVC, DATA. Funcionando em cima do jogo tera online.
 
 Você pode ver a demo clicando [AQUI](http://playlatera.com:8081)
 
