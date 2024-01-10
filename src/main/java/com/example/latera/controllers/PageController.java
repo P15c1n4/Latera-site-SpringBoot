@@ -33,7 +33,6 @@ public class PageController {
         return "hall";
     }
 
-
     @GetMapping(value = "/eventlist")
     public String EventList(@RequestParam("type") short type, Model model){
 
@@ -67,7 +66,13 @@ public class PageController {
 
 
     @GetMapping(value = "/shop")
-    public String Shop(@RequestParam("id") short id, @SessionAttribute("userid") short userid, Model model){
+    public String Shop(@RequestParam("id") short id, HttpSession session, Model model){
+
+        if(session.getAttribute("userid") == null){
+
+            model.addAttribute("erro", "Você deve estar logado!");
+            return "index";
+        }
 
         OffertModel offert = ofertRepository.findById(id);
 
