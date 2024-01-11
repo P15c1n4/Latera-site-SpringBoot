@@ -134,14 +134,14 @@ function rankPlayer(pos,name,pClass,clear,dgStatus){
 
 
         if(dgStatus === "Skilled"){
-            statusColor = "#ff6600";
+            var Stilo = 'background-color: rgb(238, 110, 25);';
             clear = "Clears: "+clear+" - "+dgStatus;
 
         }else if(dgStatus === "Rookie"){
-            statusColor = "#4cea4c";
+            var Stilo = 'background-color: rgb(40, 176, 2);';
             clear = "Clears: "+clear+" - "+dgStatus;
         }else{
-            statusColor = "#fff";
+            var Stilo = 'background-color: rgb(60, 62, 60);';
             clear = "Clears: "+clear;
         }
 
@@ -154,13 +154,13 @@ function rankPlayer(pos,name,pClass,clear,dgStatus){
             elemeto.querySelector("img").src = "/static/img/unk.png";
             elemeto.querySelector("a").innerHTML = name;
             elemeto.querySelector("span").innerHTML = "";
-            elemeto.querySelector("span").style.color = statusColor;
+            elemeto.querySelector("span").style.cssText = Stilo;
             break;
         default :
             elemeto.querySelector("img").src = "/static/img/"+pClass+".png";
             elemeto.querySelector("a").innerHTML = name;
             elemeto.querySelector("span").innerHTML = clear;
-            elemeto.querySelector("span").style.color = statusColor;
+            elemeto.querySelector("span").style.cssText = Stilo;
             break;
     }
 }

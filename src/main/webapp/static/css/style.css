@@ -675,11 +675,15 @@ footer a{
 
 }
 
+
 .centralMainDiv{
-    height: 1200px;
+    height: 1250px;
+    width: 100%;
     background: url(/static/img/background1.jpg);
     background-size: cover;
+    background-attachment: fixed;
     background-position: center;
+
 }
 
 .headerCentralDiv{
@@ -719,7 +723,7 @@ footer a{
 }
 
 .mainContentBottomDiv{
-    height: 610px;
+    height: 640px;
     width: 960px;
     background-color: #14161a;
     border: solid 5px #5e5e5e;
@@ -745,7 +749,7 @@ footer a{
 }
 
 .mainContentBottomBannerDiv img{
-    height: 515px;
+    height: 555px;
     width: 200px;
     border: #323c4c solid 5px;
     border-radius: 7px;
@@ -791,7 +795,11 @@ footer a{
     width: 25px;
     height: 25px;
     margin-right: 15px;
-}
+    border: solid 2px #fff;
+    border-radius: 50%;
+    background-color: rgb(60, 62, 60);
+    padding: 3px 3px;
+  }
 
 .eventsContent span{
     float: right;
@@ -799,7 +807,14 @@ footer a{
     font-weight: 700;
     margin-right: 10px;
     color: #fff;
-   
+    margin-top: 4px;
+    text-shadow: #000 0.05em 0.05em 0.05em;
+
+   border: solid 2px #fff;
+   border-radius: 15px;
+   padding: 0px 5px;
+   color: #fff;
+   box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.5);
 }
 
 .eventsContent a {
@@ -807,6 +822,7 @@ footer a{
     white-space: nowrap;
     overflow: auto;
     width: 350px;
+    margin-bottom: 7px;
 }
 
 
@@ -830,7 +846,7 @@ footer a{
     width: 710px;
     border: rgb(0, 0, 0) solid 2px;
     border-radius: 10px;
-    height: 275px;
+    height: 325px;
 }
 
 .mainContentBottomEventsEventDiv{
@@ -935,8 +951,7 @@ footer a{
   }
   
   
-  
-  
+
   
 
 
