@@ -62,7 +62,7 @@ public class AuthController {
         Optional<UserModel> userModel = userRepository.findByUserNameAndPassWord(userRecorderDto.userName(), PasswordHash);
 
 
-        if(userModel.isEmpty()){
+        if(userModel.isPresent()){
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
         }
 

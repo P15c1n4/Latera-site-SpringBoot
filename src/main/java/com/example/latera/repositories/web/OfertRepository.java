@@ -13,7 +13,7 @@ import java.util.Optional;
 public interface OfertRepository extends JpaRepository<OffertModel, Integer> {
 
 
-    OffertModel findById(short id);
+    Optional<OffertModel> findById(short id);
 
     List<OffertModel> findAllByOfferType(short type);
 

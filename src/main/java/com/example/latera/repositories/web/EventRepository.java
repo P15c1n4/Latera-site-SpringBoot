@@ -7,6 +7,7 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Optional;
 
 @Repository
 public interface EventRepository extends JpaRepository<EventModel, Integer> {
@@ -19,5 +20,5 @@ public interface EventRepository extends JpaRepository<EventModel, Integer> {
     @Query(nativeQuery = true, value = "SELECT * FROM evntsinfo ORDER BY eventTime DESC LIMIT 6")
     List<EventModel> findTop5OrderByIdDesc();
 
-    EventModel findById(short id);
+    Optional<EventModel> findById(short id);
 }

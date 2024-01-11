@@ -53,13 +53,18 @@ public class PageController {
     @GetMapping(value = "/event")
     public String Event(@RequestParam("id") short id, Model model){
 
-        EventModel event = eventRepository.findById(id);
+        Optional<EventModel> event = eventRepository.findById(id);
 
-        List<EventModel> events = eventRepository.findAllByEventTypeOrderByIdDesc(event.getEventType());
+        if(!event.isPresent()){
+            return "";
 
-        model.addAttribute("event",event)
+        }
+
+        List<EventModel> events = eventRepository.findAllByEventTypeOrderByIdDesc(event.get().getEventType());
+
+        model.addAttribute("event",event.get())
                 .addAttribute("list",events)
-                .addAttribute("type",event.getEventType());
+                .addAttribute("type",event.get().getEventType());
 
         return "patch";
     }
@@ -74,14 +79,14 @@ public class PageController {
             return "index";
         }
 
-        OffertModel offert = ofertRepository.findById(id);
+        Optional<OffertModel> offert = ofertRepository.findById(id);
 
-        if(offert == null){
+        if(!offert.isPresent()){
             model.addAttribute("erro", "Essa oferta não existe!");
             return "index";
         }
 
-        model.addAttribute("offert", offert);
+        model.addAttribute("offert", offert.get());
 
         return "shop";
 
