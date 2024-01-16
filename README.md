@@ -26,4 +26,4 @@ Você pode ver a demo clicando [AQUI](http://playlatera.com:8081)
 
 
 ### Loja Integrada
-![Imagem da loja do site](https://github.com/P15c1n4/Latera-site-SpringBoot/assets/93447442/2cb59afb-9674-4e12-84e0-df8353343e87)
+![Imagem da loja do site](https://github.com/P15c1n4/Latera-site-SpringBoot/assets/93447442/4a14cf74-419f-4025-9f13-aa19b4985b6f)
