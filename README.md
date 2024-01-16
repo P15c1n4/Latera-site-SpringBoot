@@ -15,8 +15,9 @@ Você pode ver a demo clicando [AQUI](http://playlatera.com:8081)
 ![Imagem da pagina inicial do site mostrando o conteúdo](https://cdn.discordapp.com/attachments/1122605734115410144/1122621137965301851/Screenshot_2.png)
 
 
-### Hall Principal e integração como banco de dados
-![Imagem Do hall de entrada do site](https://github.com/P15c1n4/Latera-site-SpringBoot/assets/93447442/a0653f9e-a0d6-41f1-81ee-35dda404b7c1)
+### Hall Principal integrado como banco de dados do game
+![Imagem Do hall de entrada do site](https://github.com/P15c1n4/Latera-site-SpringBoot/assets/93447442/c70b200e-0e91-435e-b313-722c9e95b77a)
+
 
 
 
