@@ -25,7 +25,7 @@
                                         <li><a href="hall" class="menuTextColor">Hall</a></li>
                                         <li><a href="trade" class="menuTextColor">Trade</a></li>
                                         <li><a href="shop?id=1" class="menuTextColor" style="font-weight: 700;">Shop</a></li>
-                                        <li><a class="botao2" href="/auth/logout">Logout</a></li>
+                                        <li><a class="botao2" href="/auth/logout">Sair</a></li>
                                     </ul>
                                 </nav>
                             </div>
