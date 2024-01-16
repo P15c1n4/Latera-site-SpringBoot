@@ -16,15 +16,15 @@ Você pode ver a demo clicando [AQUI](http://playlatera.com:8081)
 
 
 ### Hall Principal integrado como banco de dados do game
-![Imagem Do hall de entrada do site](https://github.com/P15c1n4/Latera-site-SpringBoot/assets/93447442/c70b200e-0e91-435e-b313-722c9e95b77a)
-
+![Imagem Do hall de entrada do site](https://github.com/P15c1n4/Latera-site-SpringBoot/assets/93447442/095e2c85-6e26-474b-8457-9b0bccf809ce)
 
 
 
 ### Campo de atualizações
-![Imagem Do Campo de atualizações do site](https://github.com/P15c1n4/Latera-site-SpringBoot/assets/93447442/3792cb62-6ece-4ef2-8c60-9f70b4f0673a)
+![Imagem Do Campo de atualizações do site](https://github.com/P15c1n4/Latera-site-SpringBoot/assets/93447442/9304186a-aeda-46a9-a877-bf2c9aba8f9c)
 
 
 
 ### Loja Integrada
-![Imagem da loja do site](https://github.com/P15c1n4/Latera-site-SpringBoot/assets/93447442/4a14cf74-419f-4025-9f13-aa19b4985b6f)
+![Imagem da loja do site](https://github.com/P15c1n4/Latera-site-SpringBoot/assets/93447442/24b7f7ad-cca7-4d1c-9480-904ce0dfb7ba)
+
