@@ -16,12 +16,14 @@ Você pode ver a demo clicando [AQUI](http://playlatera.com:8081)
 
 
 ### Hall Principal e integração como banco de dados
-![Imagem Do hall de entrada do site](https://cdn.discordapp.com/attachments/1122605734115410144/1122621138414096465/Screenshot_3.png)
+![Imagem Do hall de entrada do site](https://github.com/P15c1n4/Latera-site-SpringBoot/assets/93447442/a0653f9e-a0d6-41f1-81ee-35dda404b7c1)
+
 
 
 ### Campo de atualizações
-![Imagem Do Campo de atualizações do site](https://cdn.discordapp.com/attachments/1122605734115410144/1122621138879660083/Screenshot_4.png)
+![Imagem Do Campo de atualizações do site](https://github.com/P15c1n4/Latera-site-SpringBoot/assets/93447442/3792cb62-6ece-4ef2-8c60-9f70b4f0673a)
 
 
-### Loja Integrada com Mercado Pago
-![Imagem da loja do site](https://cdn.discordapp.com/attachments/1122605734115410144/1122621139353604156/Screenshot_5.png)
+
+### Loja Integrada
+![Imagem da loja do site](https://github.com/P15c1n4/Latera-site-SpringBoot/assets/93447442/2cb59afb-9674-4e12-84e0-df8353343e87)
