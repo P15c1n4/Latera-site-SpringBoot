@@ -90,7 +90,11 @@ function findPlayerRank(){
         if (xhr.status === 200) {
 
             if(xhr.responseText.length === 2){
+                var spanElement = document.querySelector('.eventsContent').querySelector('span');
+
                 rankPlayer(0,"ESSA PESQUISA NÃO RETORNOU DADOS!",undefined,undefined,undefined);
+
+                spanElement.style.border = 'none';
                 
             }else{
                 let data = JSON.parse(xhr.responseText);
@@ -128,22 +132,19 @@ function rankPlayer(pos,name,pClass,clear,dgStatus){
     var elemeto = document.getElementById(idElement);
     var statusColor = "";
     
-    
-    
-    
 
 
-        if(dgStatus === "Skilled"){
-            var Stilo = 'background-color: rgb(238, 110, 25);';
-            clear = "Clears: "+clear+" - "+dgStatus;
+    if(dgStatus === "Skilled"){
+        var Stilo = 'background-color: rgb(238, 110, 25);';
+        clear = "Clears: "+clear+" - "+dgStatus;
 
-        }else if(dgStatus === "Rookie"){
-            var Stilo = 'background-color: rgb(40, 176, 2);';
-            clear = "Clears: "+clear+" - "+dgStatus;
-        }else{
-            var Stilo = 'background-color: rgb(60, 62, 60);';
-            clear = "Clears: "+clear;
-        }
+    }else if(dgStatus === "Rookie"){
+        var Stilo = 'background-color: rgb(40, 176, 2);';
+        clear = "Clears: "+clear+" - "+dgStatus;
+    }else{
+        var Stilo = 'background-color: rgb(60, 62, 60);';
+        clear = "Clears: "+clear;
+    }
 
 
     

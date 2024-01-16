@@ -54,7 +54,8 @@ body{
 
 #mainDiv{
     height: 1200px;
-    background: url(/static/img/background2.jpg);
+    /*background: url(/static/img/background2.jpg);*/
+    background-color: lightgray;
     background-size: cover;
     background-position: center;
 }
@@ -70,18 +71,20 @@ body{
 }
 
 #mainContentAttPainelDiv{
-    margin-top: 10px;
     background-color: #66bbff;
     width: 400px;
     border-radius: 15px;
 }
 
 #mainContentAttDiv{
-    color: #fff;
+    color: ;
     margin-left: 10px;
 }
 
-
+#mainContentAttDiv h2{
+    color: #fff;
+    text-shadow: #000 0.05em 0.05em 0.05em;
+}
 
 /*=================Layout===================*/
 

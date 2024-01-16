@@ -39,7 +39,7 @@ public interface DgCountRepository extends JpaRepository<DgCountModel, Integer> 
             "SELECT dg.userDbId, 0 AS continentId, SUM(dg.clearCount) AS clearCount, u.userName, u.class, '' AS dgStatus " +
                     "from DungeonClearCount AS dg LEFT JOIN Users AS u  ON dg.userDbId = u.userDbId " +
                     "WHERE dg.continentId IN (9916, 9027, 3126, 3203) AND u.userName = :userName " +
-                    "GROUP BY dg.userDbId, u.userName, u.class ")
+                    "GROUP BY dg.userDbId, u.userName, u.class")
     List<DgCountModel> findAllDgsClearCountByName(@Param(value = "userName") String userName);
 
 }

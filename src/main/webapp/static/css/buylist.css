@@ -27,7 +27,7 @@ body{
 #mainContentAttPainelDiv{
     border: solid 3px #000;
     width: 455px;
-    background-color: gray;
+    background-color: #66bbff;
     padding: 0px 10px;
     border-radius: 10px;
 }
@@ -103,9 +103,11 @@ body{
 .tabs{
     text-decoration: none;
     color:  #fff;
+        text-shadow: #000 0.05em 0.05em 0.05em;
     font-size: 1.3em;
     font-weight: 700;
-    background-color: #5e5e5e;
+    /*background-color: #5e5e5e;*/
+    background-color: #ffbb01;
     padding: 0px 10px;
     border: 2px solid #343538;
     border-radius: 10px 10px 0px 0px;

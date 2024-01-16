@@ -94,11 +94,13 @@ body{
 }
 
 #productListLeftDiv h2{
-    color: #fff;
+    color: #ffbb0a;
+    text-shadow: #000 0.05em 0.05em 0.05em;
 }
 
 #mainDiv{
-    background: url(/static/img/background3.jpg);
+    /*background: url(/static/img/background3.jpg);*/
+    background-color: lightgray;
     background-size: cover;
     background-position: center;
     height: 1200px;

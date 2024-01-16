@@ -180,6 +180,7 @@ body{
 .tabs{
     text-decoration: none;
     color:  #fff;
+    text-shadow: #000 0.05em 0.05em 0.05em;
     font-size: 1.3em;
     font-weight: 700;
     background-color: #5e5e5e;
@@ -638,7 +639,7 @@ footer a{
 
 .centralMainLimiteDiv{
     width: 970px;
-    height: 100vh;
+    height: 100%;
 }
 
 
@@ -679,7 +680,8 @@ footer a{
 .centralMainDiv{
     height: 1250px;
     width: 100%;
-    background: url(/static/img/background1.jpg);
+    /*background: url(/static/img/background1.jpg);*/
+    background-color: lightgray;
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
