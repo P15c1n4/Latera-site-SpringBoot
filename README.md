@@ -16,7 +16,8 @@ Você pode ver a demo clicando [AQUI](http://playlatera.com:8081)
 
 
 ### Hall Principal integrado como banco de dados do game
-![Imagem Do hall de entrada do site](https://github.com/P15c1n4/Latera-site-SpringBoot/assets/93447442/095e2c85-6e26-474b-8457-9b0bccf809ce)
+![Imagem Do hall de entrada do site](https://github.com/P15c1n4/Latera-site-SpringBoot/assets/93447442/95076c50-1321-4ecb-b457-6ef9572b9f7d)
+
 
 
 
