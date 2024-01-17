@@ -116,7 +116,7 @@
                         </div>
                     </div>
                 </div>
-                <footer>
+                <footer id="footerDiv">
                     <div class="footerContactDiv Flex5">
                         <div id="copyright">
                             <p>&#169; Piscina#9603</p>

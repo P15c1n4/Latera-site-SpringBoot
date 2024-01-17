@@ -670,9 +670,9 @@ footer a{
     height: 280px;
     width: 960px;
     margin-top: 10px;
-    border-radius: 10px 10px 0px 0px;
     border: #4e4e4e solid 5px;
-    border-bottom: none;
+    border-radius: 10px;
+
 
 }
 
@@ -722,6 +722,7 @@ footer a{
 .mainContentTopDiv{
     width: 970px;
     height: 300px;
+    margin-bottom: 15px;
 }
 
 .mainContentBottomDiv{
@@ -729,6 +730,7 @@ footer a{
     width: 960px;
     background-color: #14161a;
     border: solid 5px #5e5e5e;
+    border-radius: 10px 10px 0px 0px;
 }
 
 
@@ -952,7 +954,9 @@ footer a{
       color: #fff;
   }
   
-  
+  #footerDiv{
+    margin-top: 10px;
+  }
 
   
 
