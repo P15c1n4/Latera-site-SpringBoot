@@ -1,11 +1,9 @@
-#  Site Latera.
-## Site simples + Backend feito em java SpringBoot, MVC, DATA. Funcionando em cima do jogo tera online.
-
-Você pode ver a demo clicando [AQUI](http://playlatera.com:8081)
+#  Site Latera(Game server atualmente desligado!).
+## Site simples + Backend feito em java SpringBoot, MVC, DATA. rodando em cima do jogo tera online.
 
 <br />
 
->Este site utiliza uma base de dados local do servidor de Tera online, baseado na versão 100.02.
+>Este site Foi desenvolvido para um servidor privado e utiliza uma base de dados local do servidor de Tera online, baseado na versão 100.02.
 
 ### Home
 ![Imagem da pagina inicial do site](https://cdn.discordapp.com/attachments/1122605734115410144/1122621137508126911/Screenshot_1.png)
