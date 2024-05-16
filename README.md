@@ -1,9 +1,9 @@
-#  Site Latera(Game server atualmente desligado!).
-## Site simples + Backend feito em java SpringBoot, MVC, DATA. rodando em cima do jogo tera online.
+#  Site Latera(Game server atualmente offline!).
+## Site simples com HTML e CSS + Backend feito em java Spring. rodando em cima do jogo tera online.
 
 <br />
 
->Este site Foi desenvolvido para um servidor privado e utiliza uma base de dados local do servidor de Tera online, baseado na versão 100.02.
+>Este site Foi desenvolvido para um servidor privado (atualmente offline) e utiliza uma base de dados local do servidor de Tera online, baseado na versão 100.02.
 
 ### Home
 ![Imagem da pagina inicial do site](https://github.com/P15c1n4/Latera-site-SpringBoot/assets/93447442/1475912b-1e77-4539-9263-230b110ebfe8)
