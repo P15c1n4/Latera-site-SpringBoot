@@ -13,17 +13,17 @@
 ![Imagem da pagina inicial do site mostrando o conteúdo](https://github.com/P15c1n4/Latera-site-SpringBoot/assets/93447442/94a5b0f5-ff25-4ebe-bda4-61d706fa6857)
 
 
-### Hall Principal integrado como banco de dados do game
+### Hall
 ![Imagem Do hall de entrada do site](https://github.com/P15c1n4/Latera-site-SpringBoot/assets/93447442/95076c50-1321-4ecb-b457-6ef9572b9f7d)
 
 
 
 
-### Campo de atualizações
+### atualizações
 ![Imagem Do Campo de atualizações do site](https://github.com/P15c1n4/Latera-site-SpringBoot/assets/93447442/9304186a-aeda-46a9-a877-bf2c9aba8f9c)
 
 
 
-### Loja Integrada
+### Loja
 ![Imagem da loja do site](https://github.com/P15c1n4/Latera-site-SpringBoot/assets/93447442/24b7f7ad-cca7-4d1c-9480-904ce0dfb7ba)
 
