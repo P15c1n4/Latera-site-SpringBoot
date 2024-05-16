@@ -6,11 +6,11 @@
 >Este site Foi desenvolvido para um servidor privado e utiliza uma base de dados local do servidor de Tera online, baseado na versão 100.02.
 
 ### Home
-![Imagem da pagina inicial do site](https://cdn.discordapp.com/attachments/1122605734115410144/1122621137508126911/Screenshot_1.png)
+![Imagem da pagina inicial do site](https://github.com/P15c1n4/Latera-site-SpringBoot/assets/93447442/1475912b-1e77-4539-9263-230b110ebfe8)
 
 
 ### conteúdo
-![Imagem da pagina inicial do site mostrando o conteúdo](https://cdn.discordapp.com/attachments/1122605734115410144/1122621137965301851/Screenshot_2.png)
+![Imagem da pagina inicial do site mostrando o conteúdo](https://github.com/P15c1n4/Latera-site-SpringBoot/assets/93447442/94a5b0f5-ff25-4ebe-bda4-61d706fa6857)
 
 
 ### Hall Principal integrado como banco de dados do game
