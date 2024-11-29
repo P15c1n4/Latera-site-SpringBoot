@@ -26,4 +26,4 @@
 ### Loja
 ![Imagem da loja do site](https://github.com/P15c1n4/Latera-site-SpringBoot/assets/93447442/24b7f7ad-cca7-4d1c-9480-904ce0dfb7ba)
 <br />
-### Acho que fica claro que eu não sou front. 🤣
+
